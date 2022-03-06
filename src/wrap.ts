@@ -2,6 +2,7 @@ import type { JSONTextComponent } from 'sandstone';
 import split from './split';
 import getSingleLineWidth from './getWidth/getSingleLineWidth';
 import { containerWidth } from './withContainer';
+import generateSplit from './generateSplit';
 
 /** Inserts `\n` characters in a text component where there would otherwise be line breaks due to the text overflowing the container. */
 const wrap = <Component extends JSONTextComponent>(
@@ -40,8 +41,7 @@ const wrap = <Component extends JSONTextComponent>(
 		outputWordWidth = 0;
 	};
 
-	const lines = split(component, '\n');
-	for (const line of lines) {
+	for (const line of generateSplit(component, '\n')) {
 		const wordsAndSpaces = split(line, /( )/);
 
 		let space: JSONTextComponent | undefined;
@@ -49,15 +49,15 @@ const wrap = <Component extends JSONTextComponent>(
 			if (wordOrSpaceIndex % 2 === 0) {
 				const word = wordsAndSpaces[wordOrSpaceIndex];
 
-				/** An array of text components, each either empty or with only a single code point. */
-				const codePoints = split(word, string => (
+				for (const codePoint of generateSplit(word, string => (
 					// `...string` splits the `string` on its code points rather than its characters (to account for surrogate pairs).
 					// Prepending an empty string ensures that every input (e.g. `['ab', 'cd']`) is split into
 					// an array in which each element has at most one code point (e.g. `['', 'a', ['', 'b', ''], 'c', 'd']`)
 					// rather than an array in which some elements have multiple code points (e.g. `['a', ['', 'b', 'c'], 'd']`).
 					['', ...string]
-				));
-				for (const codePoint of codePoints) {
+				))) {
+					// `codePoint` either is empty or has only a single code point.
+
 					const codePointWidth = getSingleLineWidth(codePoint);
 					outputWordWidth += codePointWidth;
 

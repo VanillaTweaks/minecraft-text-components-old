@@ -1,4 +1,4 @@
-import type { FlatTextComponent } from '../flatten';
+import type { FlatTextComponent } from '../generateFlat';
 import type { JSONTextComponent } from 'sandstone';
 import type { IsAffectedByInheritingOptions } from './isAffectedByInheriting';
 import getHeritableKeys from '../getHeritableKeys';

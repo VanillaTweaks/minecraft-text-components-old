@@ -1,6 +1,6 @@
 import type { HeritableKey } from '../heritableKeys';
 import { whitespaceAffectedByKeys } from '../heritableKeys';
-import type { FlatTextComponent } from '../flatten';
+import type { FlatTextComponent } from '../generateFlat';
 import { notLineBreaks, notWhitespace } from './regex';
 
 export type IsAffectedByInheritingOptions = {

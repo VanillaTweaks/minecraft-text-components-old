@@ -1,7 +1,7 @@
 import type { JSONTextComponent } from 'sandstone';
 import generateMerged from './generateMerged';
 import disableInheritanceIfNecessary from './disableInheritanceIfNecessary';
-import { generateFlat } from '../flatten';
+import generateFlat from '../generateFlat';
 import generateReduced from './generateReduced';
 import factorCommonProperties from './factorCommonProperties';
 

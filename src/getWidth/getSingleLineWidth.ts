@@ -1,5 +1,5 @@
 import type { JSONTextComponent } from 'sandstone';
-import { generateFlat } from '../flatten';
+import generateFlat from '../generateFlat';
 import getSingleLineStringWidth from './getSingleLineStringWidth';
 
 /**

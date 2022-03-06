@@ -1,5 +1,5 @@
 import heritableKeys, { whitespaceAffectedByKeys } from '../heritableKeys';
-import type { FlatTextComponent } from '../flatten';
+import type { FlatTextComponent } from '../generateFlat';
 import isAffectedByInheritingFrom from './isAffectedByInheritingFrom';
 import { notWhitespace } from './regex';
 

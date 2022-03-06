@@ -1,4 +1,4 @@
-import type { FlatTextComponent } from '../flatten';
+import type { FlatTextComponent } from '../generateFlat';
 import { notLineBreaks, notWhitespace } from './regex';
 import { whitespaceUnaffectedByKeys } from '../heritableKeys';
 import minify from '.';

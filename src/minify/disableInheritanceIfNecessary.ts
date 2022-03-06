@@ -1,7 +1,7 @@
 import getHeritableKeys from '../getHeritableKeys';
 import type { JSONTextComponent } from 'sandstone';
 import isAffectedByInheriting from './isAffectedByInheriting';
-import { generateFlat } from '../flatten';
+import generateFlat from '../generateFlat';
 
 /**
  * Returns the `subcomponents` array with `''` inserted at the beginning, only if necessary to prevent other subcomponents from inheriting properties from the first.
