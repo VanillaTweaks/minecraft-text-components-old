@@ -1,0 +1,50 @@
+{
+	"name": "@vanillatweaks/minecraft-text-components",
+	"version": "0.0.1",
+	"description": "A library for manipulating Minecraft's raw JSON text components",
+	"main": "out/index.js",
+	"types": "out/index.d.ts",
+	"files": [
+		"README.md",
+		"out/*"
+	],
+	"scripts": {
+		"build": "sh ./scripts/build.sh",
+		"generate-code-point-widths": "ts-node ./scripts/generateCodePointWidths.ts",
+		"prepublishOnly": "npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/VanillaTweaks/minecraft-text-components.git"
+	},
+	"keywords": [
+		"minecraft",
+		"raw",
+		"json",
+		"text",
+		"component",
+		"components",
+		"rich"
+	],
+	"author": "VanillaTweaks",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/VanillaTweaks/minecraft-text-components/issues"
+	},
+	"homepage": "https://github.com/VanillaTweaks/minecraft-text-components#readme",
+	"peerDependencies": {
+		"sandstone": "^0.13.6"
+	},
+	"devDependencies": {
+		"@types/fs-extra": "^9.0.13",
+		"@types/node": "^17.0.21",
+		"@typescript-eslint/eslint-plugin": "^5.13.0",
+		"@typescript-eslint/parser": "^5.13.0",
+		"axios": "^0.26.0",
+		"canvas": "^2.9.0",
+		"eslint": "^8.10.0",
+		"fs-extra": "^10.0.1",
+		"ts-node": "^10.6.0",
+		"typescript": "^4.6.2"
+	}
+}

@@ -1,0 +1,2 @@
+rm -r out/*
+tsc
