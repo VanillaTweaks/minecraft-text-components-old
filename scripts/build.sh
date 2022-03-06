@@ -1,2 +1,2 @@
-rm -r dist/*
+rm -rf dist/*
 tsc
