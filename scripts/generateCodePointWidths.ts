@@ -177,11 +177,11 @@ minecraftAssets.get<Font>('/font/default.json').then(async ({ data: font }) => {
 
 	await Promise.all([
 		fs.writeFile(
-			path.join(cwd, 'src/getWidth/codePointWidths.json'),
+			path.join(cwd, 'src/lib/getWidth/codePointWidths.json'),
 			stringify(codePointWidths)
 		),
 		fs.writeFile(
-			path.join(cwd, 'src/getWidth/legacyUnicodeCodePointWidths.json'),
+			path.join(cwd, 'src/lib/getWidth/legacyUnicodeCodePointWidths.json'),
 			stringify(legacyUnicodeCodePointWidths)
 		)
 	]);
