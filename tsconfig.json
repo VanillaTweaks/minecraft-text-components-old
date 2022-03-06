@@ -12,7 +12,8 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"downlevelIteration": true,
-		"outDir": "out"
+		"outDir": "dist",
+		"declaration": true
 	},
 	"include": [
 		"src/**/*.ts",
@@ -20,6 +21,6 @@
 	],
 	"exclude": [
 		"node_modules",
-		"out"
+		"dist"
 	]
 }
