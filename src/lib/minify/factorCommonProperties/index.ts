@@ -1,4 +1,4 @@
-import type { FlatTextComponent } from '../../flatten';
+import type { FlatTextComponent } from '../../generateFlat';
 import getPropertyRanges from './getPropertyRanges';
 import splitPropertyRanges from './splitPropertyRanges';
 import removeUselessPropertyRanges from './removeUselessPropertyRanges';

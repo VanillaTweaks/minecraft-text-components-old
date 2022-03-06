@@ -1,5 +1,5 @@
-import type { FlatTextComponent } from '../../flatten';
-import { generateFlat } from '../../flatten';
+import type { FlatTextComponent } from '../../generateFlat';
+import generateFlat from '../../generateFlat';
 import PropertyBoundary from './PropertyBoundary';
 import PropertyStart from './PropertyStart';
 import generateReduced from '../generateReduced';

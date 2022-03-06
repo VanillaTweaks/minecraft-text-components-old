@@ -1,4 +1,4 @@
-import type { FlatTextComponent } from '../../flatten';
+import type { FlatTextComponent } from '../../generateFlat';
 import isAffectedByInheriting from '../isAffectedByInheriting';
 import getHeritableKeys from '../../getHeritableKeys';
 import type PropertyBoundary from './PropertyBoundary';

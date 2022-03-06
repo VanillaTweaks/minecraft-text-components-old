@@ -1,4 +1,4 @@
-import type { FlatTextComponent } from '../../flatten';
+import type { FlatTextComponent } from '../../generateFlat';
 import type PropertyBoundary from './PropertyBoundary';
 import type PropertyStart from './PropertyStart';
 import adjustPropertyIndexes from './adjustPropertyIndexes';
