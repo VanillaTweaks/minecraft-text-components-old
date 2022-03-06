@@ -40,7 +40,7 @@ const KERNING_WIDTH = 1;
 /** The default height of a bitmap font glyph in in-game pixels. */
 const DEFAULT_GLYPH_HEIGHT = 8;
 
-console.log('Generating...');
+console.log('Generating code point widths...');
 
 const minecraftAssets = axios.create({
 	baseURL: 'https://raw.githubusercontent.com/misode/mcmeta/assets/assets/minecraft',
@@ -186,5 +186,5 @@ minecraftAssets.get<Font>('/font/default.json').then(async ({ data: font }) => {
 		)
 	]);
 
-	console.log('Done!');
+	console.log('Done generating code point widths!');
 });
