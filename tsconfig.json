@@ -16,8 +16,8 @@
 		"declaration": true
 	},
 	"include": [
-		"src/**/*.ts",
-		"src/**/*.json"
+		"**/*.ts",
+		"**/*.json"
 	],
 	"exclude": [
 		"node_modules",
