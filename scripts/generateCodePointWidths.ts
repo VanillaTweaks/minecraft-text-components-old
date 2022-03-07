@@ -167,7 +167,7 @@ minecraftAssets.get<Font>('/font/default.json').then(async ({ data: font }) => {
 
 	const cwd = process.cwd();
 
-	/** Serializes a value into a JSON string, escaping characters which the TypeScript compiler doesn't like. */
+	/** Serializes a value into a JSON string, also escaping characters which the TypeScript compiler doesn't like. */
 	const stringify = (value: unknown) => (
 		JSON.stringify(value).replace(
 			/[\u2028\u2029]/g,
