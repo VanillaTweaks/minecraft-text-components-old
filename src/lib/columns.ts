@@ -7,11 +7,7 @@ import padEachLine from './padEachLine';
 import overlap from './overlap';
 import getSingleLineWidth from './getWidth/getSingleLineWidth';
 
-/**
- * Places a set of components into evenly spaced columns, each column being locally left-aligned, automatically minified.
- *
- * Disables array inheritance on the inputted components.
- */
+/** Places a set of components into evenly spaced columns, each column being locally left-aligned, automatically minified. */
 const columns = (...components: JSONTextComponent[]) => {
 	const componentWidths: number[] = [];
 
