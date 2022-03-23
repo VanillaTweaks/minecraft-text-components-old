@@ -13,14 +13,13 @@ const disableInheritanceIfNecessary = (subcomponents: JSONTextComponent[]) => {
 
 	const heritableKeys = getHeritableKeys(subcomponents[0]);
 	if (heritableKeys.length) {
-		checkingSubcomponents:
 		for (let i = 1; i < subcomponents.length; i++) {
 			const subcomponent = subcomponents[i];
 
 			for (const flatSubcomponent of generateFlat(subcomponent)) {
 				if (isAffectedByInheriting(flatSubcomponent, heritableKeys)) {
 					subcomponents.unshift('');
-					break checkingSubcomponents;
+					return subcomponents;
 				}
 			}
 		}

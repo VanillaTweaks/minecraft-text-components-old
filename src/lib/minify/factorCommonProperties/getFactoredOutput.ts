@@ -27,7 +27,6 @@ const getFactoredOutput = (nodes: Array<FlatTextComponent | PropertyBoundary>) =
 
 		const inheritedElement = currentArray[0];
 
-		merging:
 		if (
 			typeof inheritedElement === 'object'
 			&& 'text' in inheritedElement
@@ -43,7 +42,7 @@ const getFactoredOutput = (nodes: Array<FlatTextComponent | PropertyBoundary>) =
 				if (heritableKeys.length) {
 					// Ensure the `inheritedElement`'s heritable properties wouldn't overwrite the `firstSubcomponent`'s properties, or else they can't merge.
 					if (heritableKeys.some(key => key in inheritedElement)) {
-						break merging;
+						return;
 					}
 
 					// Ensure the `firstSubcomponent`'s properties wouldn't affect the other subcomponents in the `currentArray`, or else it shouldn't merge.
@@ -52,7 +51,7 @@ const getFactoredOutput = (nodes: Array<FlatTextComponent | PropertyBoundary>) =
 
 						for (const flatSubcomponent of generateFlat(subcomponent)) {
 							if (isAffectedByInheriting(flatSubcomponent, heritableKeys)) {
-								break merging;
+								return;
 							}
 						}
 					}
